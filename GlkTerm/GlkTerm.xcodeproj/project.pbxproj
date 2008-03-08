@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B7316330C11BDB300AA1023 /* GlkView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B73162A0C11BDAC00AA1023 /* GlkView.framework */; };
+		4B7316370C11BDDE00AA1023 /* GlkView.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4B73162A0C11BDAC00AA1023 /* GlkView.framework */; };
+		4B73167E0C11BF0600AA1023 /* GTAppDelegate.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4B73167C0C11BF0600AA1023 /* GTAppDelegate.h */; };
+		4B73167F0C11BF0600AA1023 /* GTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B73167D0C11BF0600AA1023 /* GTAppDelegate.m */; };
+		4B73169B0C11C1C900AA1023 /* GTWindowController.h in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4B7316990C11C1C900AA1023 /* GTWindowController.h */; };
+		4B73169C0C11C1C900AA1023 /* GTWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B73169A0C11C1C900AA1023 /* GTWindowController.m */; };
+		4B7316A50C11C29D00AA1023 /* GlkWindow.nib in Resources */ = {isa = PBXBuildFile; fileRef = 4B7316A30C11C29D00AA1023 /* GlkWindow.nib */; };
+		4B73186D0C11D0DB00AA1023 /* GlkTerm.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4B73186C0C11D0DB00AA1023 /* GlkTerm.icns */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B7316270C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D1107320486CEB800E47090;
+			remoteInfo = CocoaGlk;
+		};
+		4B7316290C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B51AA4707E8770600576AB9;
+			remoteInfo = GlkView;
+		};
+		4B73162B0C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B51AA5607E877C900576AB9;
+			remoteInfo = GlkClient;
+		};
+		4B73162D0C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B0459F107EA20F1002D7C88;
+			remoteInfo = multiwin;
+		};
+		4B73162F0C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4B0459F607EA20FE002D7C88;
+			remoteInfo = glulxe;
+		};
+		4B7316310C11BDAC00AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4BBC40F808A7AABD00B790B5;
+			remoteInfo = imagetest;
+		};
+		4B73165F0C11BE3000AA1023 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B51AA4607E8770600576AB9;
+			remoteInfo = GlkView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B7316350C11BDC700AA1023 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4B7316370C11BDDE00AA1023 /* GlkView.framework in Copy Frameworks */,
+				4B73167E0C11BF0600AA1023 /* GTAppDelegate.h in Copy Frameworks */,
+				4B73169B0C11C1C900AA1023 /* GTWindowController.h in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* GlkTerm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTerm_Prefix.pch; sourceTree = "<group>"; };
+		4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaGlk.xcodeproj; path = ../CocoaGlk/CocoaGlk.xcodeproj; sourceTree = SOURCE_ROOT; };
+		4B73167C0C11BF0600AA1023 /* GTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTAppDelegate.h; sourceTree = "<group>"; };
+		4B73167D0C11BF0600AA1023 /* GTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTAppDelegate.m; sourceTree = "<group>"; };
+		4B7316990C11C1C900AA1023 /* GTWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTWindowController.h; sourceTree = "<group>"; };
+		4B73169A0C11C1C900AA1023 /* GTWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTWindowController.m; sourceTree = "<group>"; };
+		4B7316A40C11C29D00AA1023 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/GlkWindow.nib; sourceTree = "<group>"; };
+		4B73186C0C11D0DB00AA1023 /* GlkTerm.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GlkTerm.icns; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* GlkTerm.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GlkTerm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				4B7316330C11BDB300AA1023 /* GlkView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4B73167C0C11BF0600AA1023 /* GTAppDelegate.h */,
+				4B73167D0C11BF0600AA1023 /* GTAppDelegate.m */,
+				4B7316990C11C1C900AA1023 /* GTWindowController.h */,
+				4B73169A0C11C1C900AA1023 /* GTWindowController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* GlkTerm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* GlkTerm */ = {
+			isa = PBXGroup;
+			children = (
+				4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = GlkTerm;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* GlkTerm_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B73186C0C11D0DB00AA1023 /* GlkTerm.icns */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				4B7316A30C11C29D00AA1023 /* GlkWindow.nib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B73161F0C11BDAC00AA1023 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B7316280C11BDAC00AA1023 /* CocoaGlk.app */,
+				4B73162A0C11BDAC00AA1023 /* GlkView.framework */,
+				4B73162C0C11BDAC00AA1023 /* GlkClient.framework */,
+				4B73162E0C11BDAC00AA1023 /* multiwin */,
+				4B7316300C11BDAC00AA1023 /* glulxe */,
+				4B7316320C11BDAC00AA1023 /* imagetest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* GlkTerm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GlkTerm" */;
+			buildPhases = (
+				4B7316790C11BEC200AA1023 /* Fix XCode dumbness */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				4B7316350C11BDC700AA1023 /* Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B7316600C11BE3000AA1023 /* PBXTargetDependency */,
+			);
+			name = GlkTerm;
+			productInstallPath = "$(HOME)/Applications";
+			productName = GlkTerm;
+			productReference = 8D1107320486CEB800E47090 /* GlkTerm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 4B7318220C11CD7700AA1023 /* Build configuration list for PBXProject "GlkTerm" */;
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* GlkTerm */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4B73161F0C11BDAC00AA1023 /* Products */;
+					ProjectRef = 4B73161E0C11BDAC00AA1023 /* CocoaGlk.xcodeproj */;
+				},
+			);
+			targets = (
+				8D1107260486CEB800E47090 /* GlkTerm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4B7316280C11BDAC00AA1023 /* CocoaGlk.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = CocoaGlk.app;
+			remoteRef = 4B7316270C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B73162A0C11BDAC00AA1023 /* GlkView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GlkView.framework;
+			remoteRef = 4B7316290C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B73162C0C11BDAC00AA1023 /* GlkClient.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GlkClient.framework;
+			remoteRef = 4B73162B0C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B73162E0C11BDAC00AA1023 /* multiwin */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = multiwin;
+			remoteRef = 4B73162D0C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B7316300C11BDAC00AA1023 /* glulxe */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = glulxe;
+			remoteRef = 4B73162F0C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4B7316320C11BDAC00AA1023 /* imagetest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = imagetest;
+			remoteRef = 4B7316310C11BDAC00AA1023 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				4B7316A50C11C29D00AA1023 /* GlkWindow.nib in Resources */,
+				4B73186D0C11D0DB00AA1023 /* GlkTerm.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B7316790C11BEC200AA1023 /* Fix XCode dumbness */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Fix XCode dumbness";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# XCode is too stupid to work out that CocoaGlk binaries live in the CocoaGlk directory. Sigh.\nrm -rf ${TARGET_BUILD_DIR}/GlkView.framework\nrm -rf ${TARGET_BUILD_DIR}/GlkClient.framework\n\ncp -R ${PROJECT_DIR}/../CocoaGlk/build/Deployment/GlkView.framework ${TARGET_BUILD_DIR}/GlkView.framework || exit 1\ncp -R ${PROJECT_DIR}/../CocoaGlk/build/Deployment/GlkClient.framework ${TARGET_BUILD_DIR}/GlkClient.framework || exit 1\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				4B73167F0C11BF0600AA1023 /* GTAppDelegate.m in Sources */,
+				4B73169C0C11C1C900AA1023 /* GTWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B7316600C11BE3000AA1023 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GlkView;
+			targetProxy = 4B73165F0C11BE3000AA1023 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		4B7316A30C11C29D00AA1023 /* GlkWindow.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B7316A40C11C29D00AA1023 /* English */,
+			);
+			name = GlkWindow.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B7318230C11CD7700AA1023 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Development;
+		};
+		4B7318240C11CD7700AA1023 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+			};
+			name = Deployment;
+		};
+		4B7318250C11CD7700AA1023 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		C01FCF4B08A954540054247C /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = GlkTerm;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		C01FCF4C08A954540054247B /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.3;
+				PRODUCT_NAME = GlkTerm;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Deployment;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B7318220C11CD7700AA1023 /* Build configuration list for PBXProject "GlkTerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B7318230C11CD7700AA1023 /* Development */,
+				4B7318240C11CD7700AA1023 /* Deployment */,
+				4B7318250C11CD7700AA1023 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "GlkTerm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247C /* Development */,
+				C01FCF4C08A954540054247B /* Deployment */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

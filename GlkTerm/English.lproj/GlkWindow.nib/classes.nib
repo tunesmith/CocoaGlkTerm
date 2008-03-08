@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {showLogWindow = id; }; 
+            CLASS = GTWindowController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {glkView = GlkView; logDrawer = NSDrawer; logView = NSTextView; }; 
+            SUPERCLASS = NSWindowController; 
+        }, 
+        {
+            CLASS = GlkView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {delegate = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {CLASS = NSObject; LANGUAGE = ObjC; }
+    ); 
+    IBVersion = 1; 
+}

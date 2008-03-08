@@ -1,0 +1,17 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {showLogWindow = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GTAppDelegate; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {introWindow = NSWindow; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
