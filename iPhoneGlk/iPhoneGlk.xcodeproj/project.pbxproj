@@ -32,6 +32,7 @@
 		4B44ABF90D843F12000BA634 /* glk_cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB8B0D843C37000BA634 /* glk_cocoa.m */; };
 		4B44ABFA0D843F13000BA634 /* gi_dispa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB880D843C37000BA634 /* gi_dispa.m */; };
 		4B44ABFB0D843F13000BA634 /* gi_blorb.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB860D843C37000BA634 /* gi_blorb.m */; };
+		4BF27DA20D84767000F052D4 /* imagetest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27DA10D84767000F052D4 /* imagetest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,47 +46,6 @@
 		289E37750D53116900ACCF19 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iPhoneGlkTerm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneGlkTerm_Prefix.pch; sourceTree = "<group>"; };
-		4B44AB5A0D843C24000BA634 /* GlkArrangeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkArrangeEvent.h; sourceTree = "<group>"; };
-		4B44AB5B0D843C24000BA634 /* GlkArrangeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkArrangeEvent.m; sourceTree = "<group>"; };
-		4B44AB5C0D843C24000BA634 /* GlkAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkAutomation.h; sourceTree = "<group>"; };
-		4B44AB5D0D843C24000BA634 /* GlkClearMargins.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkClearMargins.h; sourceTree = "<group>"; };
-		4B44AB5E0D843C24000BA634 /* GlkClearMargins.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkClearMargins.m; sourceTree = "<group>"; };
-		4B44AB5F0D843C24000BA634 /* GlkCustomTextSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkCustomTextSection.h; sourceTree = "<group>"; };
-		4B44AB600D843C24000BA634 /* GlkCustomTextSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkCustomTextSection.m; sourceTree = "<group>"; };
-		4B44AB610D843C24000BA634 /* GlkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkEvent.h; sourceTree = "<group>"; };
-		4B44AB620D843C24000BA634 /* GlkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkEvent.m; sourceTree = "<group>"; };
-		4B44AB630D843C24000BA634 /* GlkFileRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkFileRef.h; sourceTree = "<group>"; };
-		4B44AB640D843C24000BA634 /* GlkFileRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkFileRef.m; sourceTree = "<group>"; };
-		4B44AB650D843C24000BA634 /* GlkFileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkFileStream.h; sourceTree = "<group>"; };
-		4B44AB660D843C24000BA634 /* GlkFileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkFileStream.m; sourceTree = "<group>"; };
-		4B44AB670D843C24000BA634 /* GlkGraphicsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkGraphicsWindow.h; sourceTree = "<group>"; };
-		4B44AB680D843C24000BA634 /* GlkGraphicsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkGraphicsWindow.m; sourceTree = "<group>"; };
-		4B44AB690D843C24000BA634 /* GlkGridTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkGridTypesetter.h; sourceTree = "<group>"; };
-		4B44AB6A0D843C24000BA634 /* GlkGridTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkGridTypesetter.m; sourceTree = "<group>"; };
-		4B44AB6B0D843C24000BA634 /* GlkHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkHub.h; sourceTree = "<group>"; };
-		4B44AB6C0D843C24000BA634 /* GlkHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkHub.m; sourceTree = "<group>"; };
-		4B44AB6D0D843C24000BA634 /* GlkImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkImage.h; sourceTree = "<group>"; };
-		4B44AB6E0D843C24000BA634 /* GlkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkImage.m; sourceTree = "<group>"; };
-		4B44AB6F0D843C24000BA634 /* GlkMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkMoreView.h; sourceTree = "<group>"; };
-		4B44AB700D843C24000BA634 /* GlkMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkMoreView.m; sourceTree = "<group>"; };
-		4B44AB710D843C24000BA634 /* GlkPairWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkPairWindow.h; sourceTree = "<group>"; };
-		4B44AB720D843C24000BA634 /* GlkPairWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkPairWindow.m; sourceTree = "<group>"; };
-		4B44AB730D843C24000BA634 /* GlkPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkPreferences.h; sourceTree = "<group>"; };
-		4B44AB740D843C24000BA634 /* GlkPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkPreferences.m; sourceTree = "<group>"; };
-		4B44AB750D843C24000BA634 /* GlkStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkStyle.h; sourceTree = "<group>"; };
-		4B44AB760D843C24000BA634 /* GlkStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkStyle.m; sourceTree = "<group>"; };
-		4B44AB770D843C24000BA634 /* GlkTextGridWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTextGridWindow.h; sourceTree = "<group>"; };
-		4B44AB780D843C24000BA634 /* GlkTextGridWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkTextGridWindow.m; sourceTree = "<group>"; };
-		4B44AB790D843C24000BA634 /* GlkTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTextView.h; sourceTree = "<group>"; };
-		4B44AB7A0D843C24000BA634 /* GlkTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkTextView.m; sourceTree = "<group>"; };
-		4B44AB7B0D843C24000BA634 /* GlkTextWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTextWindow.h; sourceTree = "<group>"; };
-		4B44AB7C0D843C24000BA634 /* GlkTextWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkTextWindow.m; sourceTree = "<group>"; };
-		4B44AB7D0D843C24000BA634 /* GlkTypesetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTypesetter.h; sourceTree = "<group>"; };
-		4B44AB7E0D843C24000BA634 /* GlkTypesetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkTypesetter.m; sourceTree = "<group>"; };
-		4B44AB7F0D843C24000BA634 /* GlkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkView.h; sourceTree = "<group>"; };
-		4B44AB800D843C24000BA634 /* GlkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkView.m; sourceTree = "<group>"; };
-		4B44AB810D843C24000BA634 /* GlkWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkWindow.h; sourceTree = "<group>"; };
-		4B44AB820D843C24000BA634 /* GlkWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkWindow.m; sourceTree = "<group>"; };
 		4B44AB840D843C37000BA634 /* cocoaglk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoaglk.h; sourceTree = "<group>"; };
 		4B44AB850D843C37000BA634 /* gi_blorb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gi_blorb.h; sourceTree = "<group>"; };
 		4B44AB860D843C37000BA634 /* gi_blorb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gi_blorb.m; sourceTree = "<group>"; };
@@ -123,6 +83,7 @@
 		4B44ABA80D843C5D000BA634 /* GlkImageSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkImageSourceProtocol.h; sourceTree = "<group>"; };
 		4B44ABA90D843C5D000BA634 /* GlkSessionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkSessionProtocol.h; sourceTree = "<group>"; };
 		4B44ABAA0D843C5D000BA634 /* GlkStreamProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkStreamProtocol.h; sourceTree = "<group>"; };
+		4BF27DA10D84767000F052D4 /* imagetest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imagetest.m; path = ../CocoaGlk/GlkTest/imagetest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,9 +140,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4BF27D880D84764200F052D4 /* Clients */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				4B44ABA00D843C5D000BA634 /* Protocol */,
-				4B44AB590D843C24000BA634 /* GlkView */,
 				4B44AB830D843C37000BA634 /* GlkClient */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -215,55 +176,6 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4B44AB590D843C24000BA634 /* GlkView */ = {
-			isa = PBXGroup;
-			children = (
-				4B44AB5A0D843C24000BA634 /* GlkArrangeEvent.h */,
-				4B44AB5B0D843C24000BA634 /* GlkArrangeEvent.m */,
-				4B44AB5C0D843C24000BA634 /* GlkAutomation.h */,
-				4B44AB5D0D843C24000BA634 /* GlkClearMargins.h */,
-				4B44AB5E0D843C24000BA634 /* GlkClearMargins.m */,
-				4B44AB5F0D843C24000BA634 /* GlkCustomTextSection.h */,
-				4B44AB600D843C24000BA634 /* GlkCustomTextSection.m */,
-				4B44AB610D843C24000BA634 /* GlkEvent.h */,
-				4B44AB620D843C24000BA634 /* GlkEvent.m */,
-				4B44AB630D843C24000BA634 /* GlkFileRef.h */,
-				4B44AB640D843C24000BA634 /* GlkFileRef.m */,
-				4B44AB650D843C24000BA634 /* GlkFileStream.h */,
-				4B44AB660D843C24000BA634 /* GlkFileStream.m */,
-				4B44AB670D843C24000BA634 /* GlkGraphicsWindow.h */,
-				4B44AB680D843C24000BA634 /* GlkGraphicsWindow.m */,
-				4B44AB690D843C24000BA634 /* GlkGridTypesetter.h */,
-				4B44AB6A0D843C24000BA634 /* GlkGridTypesetter.m */,
-				4B44AB6B0D843C24000BA634 /* GlkHub.h */,
-				4B44AB6C0D843C24000BA634 /* GlkHub.m */,
-				4B44AB6D0D843C24000BA634 /* GlkImage.h */,
-				4B44AB6E0D843C24000BA634 /* GlkImage.m */,
-				4B44AB6F0D843C24000BA634 /* GlkMoreView.h */,
-				4B44AB700D843C24000BA634 /* GlkMoreView.m */,
-				4B44AB710D843C24000BA634 /* GlkPairWindow.h */,
-				4B44AB720D843C24000BA634 /* GlkPairWindow.m */,
-				4B44AB730D843C24000BA634 /* GlkPreferences.h */,
-				4B44AB740D843C24000BA634 /* GlkPreferences.m */,
-				4B44AB750D843C24000BA634 /* GlkStyle.h */,
-				4B44AB760D843C24000BA634 /* GlkStyle.m */,
-				4B44AB770D843C24000BA634 /* GlkTextGridWindow.h */,
-				4B44AB780D843C24000BA634 /* GlkTextGridWindow.m */,
-				4B44AB790D843C24000BA634 /* GlkTextView.h */,
-				4B44AB7A0D843C24000BA634 /* GlkTextView.m */,
-				4B44AB7B0D843C24000BA634 /* GlkTextWindow.h */,
-				4B44AB7C0D843C24000BA634 /* GlkTextWindow.m */,
-				4B44AB7D0D843C24000BA634 /* GlkTypesetter.h */,
-				4B44AB7E0D843C24000BA634 /* GlkTypesetter.m */,
-				4B44AB7F0D843C24000BA634 /* GlkView.h */,
-				4B44AB800D843C24000BA634 /* GlkView.m */,
-				4B44AB810D843C24000BA634 /* GlkWindow.h */,
-				4B44AB820D843C24000BA634 /* GlkWindow.m */,
-			);
-			name = GlkView;
-			path = ../CocoaGlk/GlkView;
 			sourceTree = "<group>";
 		};
 		4B44AB830D843C37000BA634 /* GlkClient */ = {
@@ -317,6 +229,22 @@
 			);
 			name = Protocol;
 			path = ../CocoaGlk/Protocol;
+			sourceTree = "<group>";
+		};
+		4BF27D880D84764200F052D4 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				4BF27D8A0D84765500F052D4 /* Test */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		4BF27D8A0D84765500F052D4 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				4BF27DA10D84767000F052D4 /* imagetest.m */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +339,7 @@
 				4B44ABF90D843F12000BA634 /* glk_cocoa.m in Sources */,
 				4B44ABFA0D843F13000BA634 /* gi_dispa.m in Sources */,
 				4B44ABFB0D843F13000BA634 /* gi_blorb.m in Sources */,
+				4BF27DA20D84767000F052D4 /* imagetest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
