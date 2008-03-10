@@ -76,6 +76,9 @@
 	[[terpThread rootProxy] setProtocolForProxy: @protocol(GlkSession)];
 	cocoaglk_session = (GlkSession*)[terpThread rootProxy];
 	
+	// Set up the initial buffer
+	cocoaglk_buffer = [[GlkBuffer alloc] init];
+	
 	// Signal that the interpreter is starting (an opportunity to set things up outside glk_main)
 	[self interpreterStarting: self];
 	
