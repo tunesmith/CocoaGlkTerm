@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* iPhoneGlkTermAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneGlkTermAppDelegate.m */; };
 		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		289E37760D53116900ACCF19 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289E37750D53116900ACCF19 /* MyView.m */; };
+		4B10F2370D85D18C00ABC98D /* GlkAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10F2360D85D18C00ABC98D /* GlkAppDelegate.m */; };
 		4B44ABAB0D843C64000BA634 /* GlkBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44ABA20D843C5D000BA634 /* GlkBuffer.m */; };
 		4B44ABEA0D843F0A000BA634 /* GlkUcs4Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB9E0D843C37000BA634 /* GlkUcs4Stream.m */; };
 		4B44ABEB0D843F0A000BA634 /* GlkMemoryStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB9C0D843C37000BA634 /* GlkMemoryStream.m */; };
@@ -33,6 +32,7 @@
 		4B44ABFA0D843F13000BA634 /* gi_dispa.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB880D843C37000BA634 /* gi_dispa.m */; };
 		4B44ABFB0D843F13000BA634 /* gi_blorb.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB860D843C37000BA634 /* gi_blorb.m */; };
 		4BF27DA20D84767000F052D4 /* imagetest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27DA10D84767000F052D4 /* imagetest.m */; };
+		4BF27DD70D84796E00F052D4 /* GlkSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF27DD60D84796E00F052D4 /* GlkSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +46,8 @@
 		289E37750D53116900ACCF19 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* iPhoneGlkTerm_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneGlkTerm_Prefix.pch; sourceTree = "<group>"; };
+		4B10F2350D85D18C00ABC98D /* GlkAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkAppDelegate.h; sourceTree = "<group>"; };
+		4B10F2360D85D18C00ABC98D /* GlkAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkAppDelegate.m; sourceTree = "<group>"; };
 		4B44AB840D843C37000BA634 /* cocoaglk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoaglk.h; sourceTree = "<group>"; };
 		4B44AB850D843C37000BA634 /* gi_blorb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gi_blorb.h; sourceTree = "<group>"; };
 		4B44AB860D843C37000BA634 /* gi_blorb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gi_blorb.m; sourceTree = "<group>"; };
@@ -83,7 +85,9 @@
 		4B44ABA80D843C5D000BA634 /* GlkImageSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkImageSourceProtocol.h; sourceTree = "<group>"; };
 		4B44ABA90D843C5D000BA634 /* GlkSessionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkSessionProtocol.h; sourceTree = "<group>"; };
 		4B44ABAA0D843C5D000BA634 /* GlkStreamProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkStreamProtocol.h; sourceTree = "<group>"; };
-		4BF27DA10D84767000F052D4 /* imagetest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imagetest.m; path = ../CocoaGlk/GlkTest/imagetest.m; sourceTree = "<group>"; };
+		4BF27DA10D84767000F052D4 /* imagetest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = imagetest.m; sourceTree = "<group>"; };
+		4BF27DD50D84796E00F052D4 /* GlkSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkSession.h; sourceTree = "<group>"; };
+		4BF27DD60D84796E00F052D4 /* GlkSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkSession.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				080E96DDFE201D6D7F000001 /* Classes */,
 				4B44ABA00D843C5D000BA634 /* Protocol */,
 				4B44AB830D843C37000BA634 /* GlkClient */,
+				4BF27DD10D84795F00F052D4 /* GlkView */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -234,17 +239,45 @@
 		4BF27D880D84764200F052D4 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
-				4BF27D8A0D84765500F052D4 /* Test */,
+				4BF27D8A0D84765500F052D4 /* GlkTest */,
+				4B10F2350D85D18C00ABC98D /* GlkAppDelegate.h */,
+				4B10F2360D85D18C00ABC98D /* GlkAppDelegate.m */,
 			);
-			name = Clients;
+			path = Clients;
 			sourceTree = "<group>";
 		};
-		4BF27D8A0D84765500F052D4 /* Test */ = {
+		4BF27D8A0D84765500F052D4 /* GlkTest */ = {
 			isa = PBXGroup;
 			children = (
 				4BF27DA10D84767000F052D4 /* imagetest.m */,
 			);
-			name = Test;
+			name = GlkTest;
+			path = ../../CocoaGlk/GlkTest;
+			sourceTree = "<group>";
+		};
+		4BF27DD10D84795F00F052D4 /* GlkView */ = {
+			isa = PBXGroup;
+			children = (
+				4BF27DD20D84795F00F052D4 /* Streams */,
+				4BF27DD30D84795F00F052D4 /* Windows */,
+				4BF27DD50D84796E00F052D4 /* GlkSession.h */,
+				4BF27DD60D84796E00F052D4 /* GlkSession.m */,
+			);
+			path = GlkView;
+			sourceTree = "<group>";
+		};
+		4BF27DD20D84795F00F052D4 /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
+		4BF27DD30D84795F00F052D4 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Windows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +342,7 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "mkdir ${TARGET_BUILD_DIR}/GlkClient\nln -sf  ${PROJECT_DIR}/../CocoaGlk/Protocol/*.h ${TARGET_BUILD_DIR}/GlkClient\nln -sf  ${PROJECT_DIR}/../CocoaGlk/GlkClient/*.h ${TARGET_BUILD_DIR}/GlkClient\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -318,8 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* iPhoneGlkTermAppDelegate.m in Sources */,
-				289E37760D53116900ACCF19 /* MyView.m in Sources */,
 				4B44ABAB0D843C64000BA634 /* GlkBuffer.m in Sources */,
 				4B44ABEA0D843F0A000BA634 /* GlkUcs4Stream.m in Sources */,
 				4B44ABEB0D843F0A000BA634 /* GlkMemoryStream.m in Sources */,
@@ -340,6 +372,8 @@
 				4B44ABFA0D843F13000BA634 /* gi_dispa.m in Sources */,
 				4B44ABFB0D843F13000BA634 /* gi_blorb.m in Sources */,
 				4BF27DA20D84767000F052D4 /* imagetest.m in Sources */,
+				4BF27DD70D84796E00F052D4 /* GlkSession.m in Sources */,
+				4B10F2370D85D18C00ABC98D /* GlkAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
