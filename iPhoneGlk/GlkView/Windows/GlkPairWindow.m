@@ -249,5 +249,20 @@
 	lastSize = [self glkSize];
 }
 
+// = Flushing the buffer =
+
+- (void) bufferIsFlushing {
+	[super bufferIsFlushing];
+	
+	[leftWindow bufferIsFlushing];
+	[rightWindow bufferIsFlushing];
+}
+
+- (void) bufferHasFlushed {
+	[super bufferHasFlushed];
+	
+	[leftWindow bufferHasFlushed];
+	[rightWindow bufferHasFlushed];
+}
 
 @end

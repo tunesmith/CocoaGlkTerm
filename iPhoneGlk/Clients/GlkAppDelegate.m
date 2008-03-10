@@ -12,7 +12,7 @@
 @implementation GlkAppDelegate
 
 @synthesize window;
-@synthesize contentView;
+@synthesize content;
 @synthesize session;
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {	
@@ -23,10 +23,11 @@
 	self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     
     // Set up content view
-	self.contentView = [[[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]] autorelease];
-	[window addSubview:contentView];
+	self.content = [[[GlkViewController alloc] init] autorelease];
+	[window addSubview: self.content.view];
 
 	// Start the session running
+	self.session.bufferTarget = self.content;
 	[self.session startInterpreter];
 
 	// Show window
@@ -35,7 +36,7 @@
 
 - (void)dealloc {
 	[session release];
-	[contentView release];
+	[content release];
 	[window release];
 	[super dealloc];
 }

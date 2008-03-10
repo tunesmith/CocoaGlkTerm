@@ -39,6 +39,10 @@
 - (float) heightForFixedSize: (unsigned) sz;					// Similar to widthForFixedSize, but returns height instead
 - (void) layoutInRect: (CGRect) parentRect;						// Requests that this window lay itself out in the specified rectangle
 
+// Flushing the buffer
+- (void) bufferIsFlushing;										// Indicates that we're flushing the buffers
+- (void) bufferHasFlushed;										// Indicates that we've finished flushing the buffers
+
 @end
 
 #import "GlkPairWindow.h"

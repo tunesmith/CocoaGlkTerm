@@ -30,6 +30,8 @@
 	[mainThread release];
 	[terpThread release];
 	
+	[bufferTarget release];
+	
 	[super dealloc];
 }
 
@@ -107,8 +109,44 @@
 // = Receiving data from the buffer =
 
 - (void) performOperationsFromBuffer: (in bycopy GlkBuffer*) buffer {
-	// TODO
-	NSLog(@"IMPLEMENT ME");
+	if (!bufferTarget) return;
+	
+	if (flushing) {
+		NSLog(@"WARNING: buffer flush deferred to avoid out-of-order data");
+		
+		[[NSRunLoop currentRunLoop] performSelector: @selector(performOperationsFromBuffer:)
+											 target: self
+										   argument: buffer
+											  order: 64
+											  modes: [NSArray arrayWithObject: NSDefaultRunLoopMode]];
+		return;
+	}
+		
+	flushing = YES;
+	
+	// Remember the current root window
+	bufferTarget.lastRoot	= bufferTarget.root;
+	
+	// Signal that the buffer is flushing
+	[bufferTarget.root bufferIsFlushing];
+	
+	// *WOOOSSSSHH*
+	[buffer flushToTarget: bufferTarget];
+	
+	// Tell the buffer target to change its window layout if necessary
+	if (bufferTarget.windowsNeedLayout && bufferTarget.root != nil) {
+		if (bufferTarget.lastRoot != bufferTarget.root) {
+			[bufferTarget updateRootWindow];
+		}
+		
+		[bufferTarget layoutWindows];
+		bufferTarget.windowsNeedLayout = NO;
+	}
+	
+	[bufferTarget.root bufferHasFlushed];
+	bufferTarget.lastRoot = nil;
+	
+	flushing = NO;
 }
 
 // = Windows =
@@ -279,4 +317,5 @@
 }
 
 @synthesize delegate;
+@synthesize bufferTarget;
 @end

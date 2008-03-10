@@ -50,6 +50,18 @@
 	// Release anything that's not essential, such as cached data.
 }
 
+// = GlkBufferTarget implementation =
+
+- (void) layoutWindows {
+	[lastRoot removeFromSuperview];
+	[self.view addSubview: root];
+	[self.view setNeedsDisplay];	
+}
+
+- (void) updateRootWindow {
+	[root layoutInRect: [self.view bounds]];
+}
+
 // = GlkBuffer implementation =
 
 // Windows
@@ -272,4 +284,7 @@
 	NSLog(@"Implement me!");
 }
 
+@synthesize root;
+@synthesize lastRoot;
+@synthesize windowsNeedLayout;
 @end

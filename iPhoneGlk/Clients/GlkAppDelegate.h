@@ -9,17 +9,18 @@
 #import <UIKit/UIKit.h>
 
 #import "GlkSession.h"
+#import "GlkViewController.h"
 
 @interface GlkAppDelegate : NSObject {
-	UIWindow*	window;										// The main application window
-	UIView*		contentView;								// The primary content view
+	UIWindow*			window;								// The main application window
+	GlkViewController*	content;							// The controller managing primary content view
 	
 	GlkSession*	session;									// The running (or finished) interpreter session
 }
 
-@property (retain)				UIWindow*	window;
-@property (retain)				UIView*		contentView;
+@property (retain)				UIWindow*			window;
+@property (retain)				GlkViewController*	content;
 
-@property (retain, readonly)	GlkSession*	session;
+@property (retain, readonly)	GlkSession*			session;
 
 @end

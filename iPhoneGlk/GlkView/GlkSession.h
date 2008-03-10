@@ -9,20 +9,39 @@
 #import <UIKit/UIKit.h>
 
 #import <GlkClient/GlkSessionProtocol.h>
+#import "GlkWindow.h"
+
+///
+/// Protocol implemented by objects that can act as a target for buffered operations
+///
+@protocol GlkBufferTarget<GlkBuffer>
+
+@property (retain, nonatomic) GlkWindow* root;												// The root window
+@property (retain, nonatomic) GlkWindow* lastRoot;											// The root window after the last time the buffer was flushed
+@property (nonatomic)		  BOOL		 windowsNeedLayout;									// YES if something has occurred to necessitate re-arranging the windows
+
+- (void) updateRootWindow;																	// Request to update the UI to reflect the value of the rootWindow property
+- (void) layoutWindows;																		// Request to cause a layout operation
+
+@end
 
 ///
 /// Singleton object that represents a session with iPhone CocoaGlk
 ///
-@interface GlkSession : NSObject<GlkSession> {
-	NSPort*			mainThreadPort;									// Port for communicating with the UI thread
-	NSPort*			terpThreadPort;									// Port for communicating with the interpreter thread
-	NSConnection*	mainThread;										// Connection to the main thread
-	NSConnection*	terpThread;										// Connection to the interpreter thread
+@interface GlkSession : NSObject<GlkSession,UIModalViewDelegate> {
+	NSPort*					mainThreadPort;							// Port for communicating with the UI thread
+	NSPort*					terpThreadPort;							// Port for communicating with the interpreter thread
+	NSConnection*			mainThread;								// Connection to the main thread
+	NSConnection*			terpThread;								// Connection to the interpreter thread
 	
-	id				delegate;										// The delegate for this session
+	id						delegate;								// The delegate for this session
+	NSObject<GlkBufferTarget>* bufferTarget;						// The location where buffered operations should be sent
+	
+	BOOL					flushing;								// YES if we're in the process of flushing a buffer
 }
 
-@property (assign) id delegate;										// The delegate for this session
+@property (assign) id					delegate;					// The delegate for this session
+@property (retain) NSObject<GlkBufferTarget>* bufferTarget;			// The location where buffered operations should be sent
 
 - (void) startInterpreter;											// Launches the interpreter thread
 

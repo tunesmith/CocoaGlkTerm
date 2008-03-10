@@ -67,6 +67,110 @@
 	lastSize = [self glkSize];
 }
 
+// = Flushing the buffer =
+
+- (void) bufferIsFlushing {
+	// Default action is to catch flies
+}
+
+- (void) bufferHasFlushed {
+	// The horrible taste of flies fails to wake us up
+}
+
 // = Acting as a stream =
+// Control
+
+- (void) closeStream {
+	// Nothing to do really
+}
+
+- (void) setPosition: (in int) position
+		  relativeTo: (in enum GlkSeekMode) seekMode {
+	// No effect
+}
+
+- (unsigned) getPosition {
+	// Spec isn't really clear on what do for window streams. We just say the position is always 0
+	return 0;
+}
+
+// Writing
+
+- (void) putChar: (unichar) ch {
+	unichar buf[1];
+	
+	buf[0] = ch;
+	
+	[self putString: [NSString stringWithCharacters: buf
+											 length: 1]];
+}
+
+- (void) putString: (NSString*) string {
+	// We're blank: nothing to do
+}
+
+- (void) putBuffer: (NSData*) buffer {
+	// Assume that buffers are in ISO Latin-1 format
+	NSString* string = [[[NSString alloc] initWithBytes: [buffer bytes]
+												 length: [buffer length]
+											   encoding: NSISOLatin1StringEncoding] autorelease];
+	
+	// Put the string
+	[self putString: string];
+}
+
+// = Reading =
+
+- (unichar) getChar {
+	return 0;
+}
+
+- (NSString*) getLineWithLength: (int) len {
+	return nil;
+}
+
+- (NSData*) getBufferWithLength: (unsigned) length {
+	return nil;
+}
+
+// = Styles =
+
+- (void) setImmediateStyleHint: (unsigned) hint
+					   toValue: (int) value {
+}
+
+- (void) clearImmediateStyleHint: (unsigned) hint {
+}
+
+- (void) setCustomAttributes: (NSDictionary*) customAttributes {
+}
+
+- (void) setStyle: (int) styleId {
+	style = styleId;
+	
+	/*
+	if (immediateStyle) {
+		[immediateStyle release];
+		immediateStyle = nil;
+	}
+	 */
+}
+
+- (int) style {
+	return style;
+}
+
+// = Hyperlinks =
+
+- (void) setHyperlink: (unsigned int) value {
+	NSLog(@"TODO: hyperlinks");
+	//[linkObject release];
+	//linkObject = [[NSNumber alloc] initWithUnsignedInt: value];
+}
+
+- (void) clearHyperlink {
+	//[linkObject release];
+	//linkObject = nil;
+}
 
 @end
