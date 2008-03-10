@@ -16,14 +16,21 @@
 - (id)init
 {
 	if (self = [super init]) {
-		// Initialize your view controller.
+		// Set the controller title
 		self.title = @"GlkViewController";
+		
+		// Create the window dictionary
+		glkWindows = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
+	[root release];
+	[lastRoot release];
+	[glkWindows release];
+	
 	[super dealloc];
 }
 
@@ -292,23 +299,23 @@
 - (void) moveCursorInWindow: (glui32) identifier
 				toXposition: (int) xpos
 				  yPosition: (int) ypos {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: move cursor");
 }
 
 - (void) clearWindowIdentifier: (glui32) identifier {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: clear window");
 }
 
 - (void) setInputLine: (in bycopy NSString*) inputLine
   forWindowIdentifier: (unsigned) windowIdentifier {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: set input line");
 }
 
 - (void) arrangeWindow: (glui32) identifier
 				method: (glui32) method
 				  size: (glui32) size
 			 keyWindow: (glui32) keyIdentifier {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: arrange window");
 }
 
 // Styles
@@ -317,7 +324,7 @@
 			 forStyle: (glui32) style
 			  toValue: (glsi32) value
 		   windowType: (glui32) wintype {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: set style hint");
 }
 
 - (void) clearStyleHint: (glui32) hint
