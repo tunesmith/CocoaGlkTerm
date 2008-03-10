@@ -36,6 +36,7 @@
 @dynamic size;
 @dynamic fixed;
 @dynamic above;
+@dynamic horizontal;
 
 - (void) setKeyWindow: (GlkWindow*) newKey {
 	[keyWindow release];

@@ -25,6 +25,8 @@
 	GlkWindow*	root;											// The root window
 	GlkWindow*	lastRoot;										// The last root window
 	BOOL		windowsNeedLayout;								// YES if the windows in this controller need to be laid out
+	
+	NSMutableDictionary*	glkWindows;							// Dictionary mapping window identifiers to the GlkWindow objects
 }
 
 @property (retain, nonatomic) GlkWindow* root;

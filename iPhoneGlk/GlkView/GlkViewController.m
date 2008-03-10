@@ -69,40 +69,222 @@
 // Creating the various types of window
 
 - (void) createBlankWindowWithIdentifier: (glui32) identifier {
-	NSLog(@"Implement me!");
+	GlkWindow* newWindow = [[GlkWindow alloc] init];
+	
+	newWindow.windowIdentifier = identifier;
+	// [newWindow setEventTarget: self];
+	// [newWindow setContainingView: self];
+	
+	[glkWindows setObject: [newWindow autorelease]
+				   forKey: [NSNumber numberWithUnsignedInt: identifier]];
 }
 
 - (void) createTextGridWindowWithIdentifier: (glui32) identifier {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: create text grid windows");
+	
+	GlkWindow* newWindow = [[GlkWindow alloc] init];
+	
+	newWindow.windowIdentifier = identifier;
+	// [newWindow setEventTarget: self];
+	// [newWindow setContainingView: self];
+	
+	[glkWindows setObject: [newWindow autorelease]
+				   forKey: [NSNumber numberWithUnsignedInt: identifier]];
 }
 
-- (void) createTextWindowWithIdentifier: (glui32) identifer {
-	NSLog(@"Implement me!");
+- (void) createTextWindowWithIdentifier: (glui32) identifier {
+	NSLog(@"Implement me: create text windows");
+
+	GlkWindow* newWindow = [[GlkWindow alloc] init];
+	
+	newWindow.windowIdentifier = identifier;
+	// [newWindow setEventTarget: self];
+	// [newWindow setContainingView: self];
+	
+	[glkWindows setObject: [newWindow autorelease]
+				   forKey: [NSNumber numberWithUnsignedInt: identifier]];
 }
 
 - (void) createGraphicsWindowWithIdentifier: (glui32) identifier {
-	NSLog(@"Implement me!");
+	NSLog(@"Implement me: create graphics windows");
+
+	GlkWindow* newWindow = [[GlkWindow alloc] init];
+	
+	newWindow.windowIdentifier = identifier;
+	// [newWindow setEventTarget: self];
+	// [newWindow setContainingView: self];
+	
+	[glkWindows setObject: [newWindow autorelease]
+				   forKey: [NSNumber numberWithUnsignedInt: identifier]];
 }
 
 // Placing windows in the tree
 
 - (void) setRootWindow: (glui32) identifier {
-	NSLog(@"Implement me!");
+	if (identifier == GlkNoWindow) {
+		[root release];
+		root = nil;
+		
+		windowsNeedLayout = YES;
+		return;
+	}
+	
+	GlkWindow* newRootWindow = [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: identifier]];
+	if (newRootWindow) {
+		[root release];
+		root = [newRootWindow retain];
+		
+		windowsNeedLayout = YES;
+	} else {
+		NSLog(@"Warning: attempt to set the root window to a nonexistent window");
+	}
 }
 
 - (void) createPairWindowWithIdentifier: (glui32) identifier
-							  keyWindow: (glui32) keyIdentifier
-							 leftWindow: (glui32) leftIdentifier
-							rightWindow: (glui32) rightIdentifier
+							  keyWindow: (glui32) keyId
+							 leftWindow: (glui32) leftId
+							rightWindow: (glui32) rightId
 								 method: (glui32) method
 								   size: (glui32) size {
-	NSLog(@"Implement me!");
+	GlkWindow* key = [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: keyId]];
+	GlkWindow* left = [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: leftId]];
+	GlkWindow* right = [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: rightId]];
+	
+	// Sanity check
+	if (key == nil || left == nil || right == nil) {
+		NSLog(@"Warning: attempt to create pair window with nonexistent child windows");
+		return;
+	}
+	
+	if (right.parentWindow != nil) {
+		NSLog(@"Warning: rightmost window of a pair must not already be in the tree (odd behaviour will result)");
+	}
+	
+	// Create the pair window
+	GlkPairWindow* newWin = [[GlkPairWindow alloc] init];
+	glui32 winDir = method & winmethod_DirMask;
+	
+	newWin.fixed			= (method&winmethod_Fixed)!=0;
+	newWin.size				= size;
+	newWin.above			= winDir==winmethod_Above||winDir==winmethod_Left;
+	newWin.horizontal		= winDir==winmethod_Left||winDir==winmethod_Right;
+	newWin.windowIdentifier	= identifier;
+	// [newWin setEventTarget: self];
+	// [newWin setPreferences: prefs];
+	// [newWin setContainingView: self];
+	
+	// Change the structure if the left window is not topmost
+	if (left.parentWindow) {
+		if (left.parentWindow.leftWindow == left) {
+			left.parentWindow.leftWindow = newWin;
+		} else if (left.parentWindow.rightWindow == left) {
+			left.parentWindow.rightWindow = newWin;
+		} else {
+			NSLog(@"Warning: parent windows do not match up (odd behaviour will result)");
+		}
+	}
+	
+	// Set the structure of the new window
+	newWin.keyWindow	= key;
+	newWin.leftWindow	= left;
+	newWin.rightWindow	= right;
+	
+	right.parentWindow	= newWin;
+	left.parentWindow	= newWin;
+	
+	// Add to the window structure
+	[glkWindows setObject: [newWin autorelease]
+				   forKey: [NSNumber numberWithUnsignedInt: identifier]];
+	windowsNeedLayout = YES;
 }
 
 // Closing windows
 
+- (void) removeIdentifier: (glui32) identifier {
+	GlkPairWindow* win = [[glkWindows objectForKey: [NSNumber numberWithUnsignedInt: identifier]] retain];
+	
+	if ([win isKindOfClass: [GlkPairWindow class]]) {
+		// Remove the ID for the left and right windows
+		if ([win leftWindow]) [self removeIdentifier: [[win leftWindow] windowIdentifier]];
+		if ([win rightWindow]) [self removeIdentifier: [[win rightWindow] windowIdentifier]];
+	}
+	
+	// Remove from the list of known windows
+	[glkWindows removeObjectForKey: [NSNumber numberWithUnsignedInt: identifier]];
+	
+	// Remove from the superview
+	[win removeFromSuperview];
+	
+	// Remove from existence (usually)
+	[win release];
+	
+	windowsNeedLayout = YES;
+}
+
 - (void) closeWindowIdentifier: (glui32) identifier {
-	NSLog(@"Implement me!");
+	GlkWindow* win = [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: identifier]];
+	
+	if (!win) {
+		NSLog(@"Warning: attempt to close a nonexistent window");
+		return;
+	}
+	
+	// Deal with the parent window
+	GlkPairWindow* parent = win.parentWindow;
+	
+	if (parent) {
+		GlkPairWindow* grandparent = parent.parentWindow;
+		GlkWindow* sibling = nil;
+		
+		// Find our sibling
+		if ([parent leftWindow] == win) {
+			sibling = [[[parent rightWindow] retain] autorelease];
+			[parent setRightWindow: nil];
+		} else if ([parent rightWindow] == win) {
+			sibling = [[[parent leftWindow] retain] autorelease];
+			[parent setLeftWindow: nil];
+		} else {
+			NSLog(@"Oops, failed to find a sibling window");
+		}
+		
+		parent.parentWindow = nil;
+		
+		if (grandparent) {
+			// Replace the appropriate window in the grandparent
+			sibling.parentWindow = grandparent;
+			
+			if ([grandparent leftWindow] == parent) {
+				[grandparent setLeftWindow: sibling];
+			} else if ([grandparent rightWindow] == parent) {
+				[grandparent setRightWindow: sibling];
+			} else {
+				NSLog(@"Oops, failed to find the parent window in the grandparent");
+			}
+		} else {
+			// Replace the root window
+			[root release];
+			root = [sibling retain];
+		}
+		
+		// Mark the parent as closed
+		[parent setClosed: YES];
+		
+		// Remove the parent window identifier
+		[self removeIdentifier: parent.windowIdentifier];
+	} else {
+		// We've closed the root window
+		[root release];
+		root = nil;
+		
+		// Mark this window as closed
+		[win setClosed: YES];
+		
+		// Remove this window identifier
+		[self removeIdentifier: identifier];
+	}
+	
+	// We'll need to layout the windows again
+	windowsNeedLayout = YES;
 }
 
 // Manipulating windows

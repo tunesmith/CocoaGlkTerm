@@ -37,6 +37,7 @@
 
 @property (nonatomic)	unsigned	size;
 @property (nonatomic)	BOOL		fixed;
+@property (nonatomic)	BOOL		horizontal;
 @property (nonatomic)	BOOL		above;
 
 @end
