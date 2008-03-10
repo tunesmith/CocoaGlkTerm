@@ -20,6 +20,7 @@
 
 - (void)drawRect:(CGRect)rect {
 	[[UIColor whiteColor] set];
+	UIRectFill(rect);
 }
 
 - (void)dealloc
