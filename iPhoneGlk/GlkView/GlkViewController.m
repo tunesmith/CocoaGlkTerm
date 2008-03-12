@@ -32,6 +32,7 @@
 	[root release];
 	[lastRoot release];
 	[glkWindows release];
+	[glkStreams release];
 	
 	[super dealloc];
 }
@@ -392,42 +393,48 @@
 
 - (void) registerStream: (in byref NSObject<GlkStream>*) stream
 		  forIdentifier: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[glkStreams setObject: stream
+				   forKey: [NSNumber numberWithUnsignedInt: streamIdentifier]];
 }
 
 - (void) registerStreamForWindow: (unsigned) windowIdentifier
 				   forIdentifier: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[glkStreams setObject: [glkWindows objectForKey: [NSNumber numberWithUnsignedInt: windowIdentifier]]
+				   forKey: [NSNumber numberWithUnsignedInt: streamIdentifier]];
 }
 
 - (void) closeStreamIdentifier: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[(NSObject<GlkStream>*)[glkStreams objectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]] closeStream];
 }
 
 - (void) unregisterStreamIdentifier: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[glkStreams removeObjectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]];
 }
 
 // Buffering stream writes
 
 - (void) putChar: (unichar) ch
 		toStream: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[(NSObject<GlkStream>*)[glkStreams objectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]] 
+				putChar: ch];
 }
 
 - (void) putString: (in bycopy NSString*) string
 		  toStream: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[(NSObject<GlkStream>*)[glkStreams objectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]] 
+				putString: string];
 }
 
 - (void) putData: (in bycopy NSData*) data							// Note: do not pass in mutable data here, as the contents may change unexpectedly
 		toStream: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[(NSObject<GlkStream>*)[glkStreams objectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]] 
+				putBuffer: data];
 }
 
 - (void) setStyle: (unsigned) style
 		 onStream: (unsigned) streamIdentifier {
-	NSLog(@"Implement me!");
+	[(NSObject<GlkStream>*)[glkStreams objectForKey: [NSNumber numberWithUnsignedInt: streamIdentifier]] 
+				setStyle: style];
 }
 
 // Hyperlinks on streams
