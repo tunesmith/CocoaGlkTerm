@@ -166,10 +166,7 @@
 // = Streams =
 
 - (byref NSObject<GlkStream>*) streamForWindowIdentifier: (unsigned) windowId {
-	// TODO
-	NSLog(@"IMPLEMENT ME");
-
-	return nil;
+	return [bufferTarget windowWithIdentifier: windowId];
 }
 
 - (byref NSObject<GlkStream>*) inputStream {

@@ -15,6 +15,7 @@
 		4B10F2870D85DD6A00ABC98D /* GlkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10F2860D85DD6A00ABC98D /* GlkViewController.m */; };
 		4B10F2900D85E18D00ABC98D /* GlkWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10F28F0D85E18D00ABC98D /* GlkWindow.m */; };
 		4B10F2A50D85E1E600ABC98D /* GlkPairWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10F2A40D85E1E600ABC98D /* GlkPairWindow.m */; };
+		4B10F48C0D8874D100ABC98D /* GlkTextWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B10F48B0D8874D100ABC98D /* GlkTextWindow.m */; };
 		4B44ABAB0D843C64000BA634 /* GlkBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44ABA20D843C5D000BA634 /* GlkBuffer.m */; };
 		4B44ABEA0D843F0A000BA634 /* GlkUcs4Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB9E0D843C37000BA634 /* GlkUcs4Stream.m */; };
 		4B44ABEB0D843F0A000BA634 /* GlkMemoryStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B44AB9C0D843C37000BA634 /* GlkMemoryStream.m */; };
@@ -53,6 +54,8 @@
 		4B10F28F0D85E18D00ABC98D /* GlkWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkWindow.m; sourceTree = "<group>"; };
 		4B10F2A30D85E1E600ABC98D /* GlkPairWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkPairWindow.h; sourceTree = "<group>"; };
 		4B10F2A40D85E1E600ABC98D /* GlkPairWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkPairWindow.m; sourceTree = "<group>"; };
+		4B10F48A0D8874D100ABC98D /* GlkTextWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlkTextWindow.h; sourceTree = "<group>"; };
+		4B10F48B0D8874D100ABC98D /* GlkTextWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlkTextWindow.m; sourceTree = "<group>"; };
 		4B44AB840D843C37000BA634 /* cocoaglk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cocoaglk.h; sourceTree = "<group>"; };
 		4B44AB850D843C37000BA634 /* gi_blorb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gi_blorb.h; sourceTree = "<group>"; };
 		4B44AB860D843C37000BA634 /* gi_blorb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gi_blorb.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				4B10F28F0D85E18D00ABC98D /* GlkWindow.m */,
 				4B10F2A30D85E1E600ABC98D /* GlkPairWindow.h */,
 				4B10F2A40D85E1E600ABC98D /* GlkPairWindow.m */,
+				4B10F48A0D8874D100ABC98D /* GlkTextWindow.h */,
+				4B10F48B0D8874D100ABC98D /* GlkTextWindow.m */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				4B10F2870D85DD6A00ABC98D /* GlkViewController.m in Sources */,
 				4B10F2900D85E18D00ABC98D /* GlkWindow.m in Sources */,
 				4B10F2A50D85E1E600ABC98D /* GlkPairWindow.m in Sources */,
+				4B10F48C0D8874D100ABC98D /* GlkTextWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

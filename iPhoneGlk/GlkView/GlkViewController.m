@@ -8,6 +8,7 @@
 
 #import "GlkViewController.h"
 
+#import "GlkTextWindow.h"
 
 @implementation GlkViewController
 
@@ -21,6 +22,7 @@
 		
 		// Create the window dictionary
 		glkWindows = [[NSMutableDictionary alloc] init];
+		glkStreams = [[NSMutableDictionary alloc] init];
 	}
 	return self;
 }
@@ -100,9 +102,7 @@
 }
 
 - (void) createTextWindowWithIdentifier: (glui32) identifier {
-	NSLog(@"Implement me: create text windows");
-
-	GlkWindow* newWindow = [[GlkWindow alloc] init];
+	GlkWindow* newWindow = [[GlkTextWindow alloc] init];
 	
 	newWindow.windowIdentifier = identifier;
 	// [newWindow setEventTarget: self];
@@ -471,6 +471,13 @@
 
 - (void) cancelHyperlinkEventsForWindowIdentifier: (unsigned) windowIdentifier {
 	NSLog(@"Implement me!");
+}
+
+// = GlkBufferTarget implementation =
+
+- (GlkWindow*) windowWithIdentifier: (int) windowId {
+	// Retrieves the window with the specified identifier
+	return [glkWindows objectForKey: [NSNumber numberWithInt: windowId]];
 }
 
 @synthesize root;

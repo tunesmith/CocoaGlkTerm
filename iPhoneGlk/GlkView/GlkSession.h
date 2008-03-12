@@ -23,6 +23,8 @@
 - (void) updateRootWindow;																	// Request to update the UI to reflect the value of the rootWindow property
 - (void) layoutWindows;																		// Request to cause a layout operation
 
+- (GlkWindow*) windowWithIdentifier: (int) windowId;										// Retrieves the window with the specified identifier
+
 @end
 
 ///

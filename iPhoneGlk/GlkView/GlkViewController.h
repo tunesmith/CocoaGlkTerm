@@ -27,6 +27,7 @@
 	BOOL		windowsNeedLayout;								// YES if the windows in this controller need to be laid out
 	
 	NSMutableDictionary*	glkWindows;							// Dictionary mapping window identifiers to the GlkWindow objects
+	NSMutableDictionary*	glkStreams;							// Dictionary mapping stream identifiers to corresponding streams
 }
 
 @property (retain, nonatomic) GlkWindow* root;
